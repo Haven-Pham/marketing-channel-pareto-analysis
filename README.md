@@ -64,6 +64,14 @@ A 50% cut cannot be placed responsibly without spend data. The recommended path:
    largest revenue engine.
 4. Monitor organic search and direct traffic during the cuts, because paid search also builds brand demand.
 
+## Deliverables
+
+| File | Description |
+|---|---|
+| [`notebooks/teddyworld_pareto_marketing.ipynb`](notebooks/teddyworld_pareto_marketing.ipynb) | Complete analysis with outputs |
+| [`reports/TeddyWorld_Channel_Pareto_Results.xlsx`](reports/TeddyWorld_Channel_Pareto_Results.xlsx) | Excel workbook: summary sheet with key findings, plus pareto table, channel split, source performance and gross margin |
+| [`reports/figures/`](reports/figures), [`reports/tables/`](reports/tables) | Charts (PNG) and result tables (CSV) |
+
 ## Repository Structure
 
 ```text
@@ -71,9 +79,10 @@ marketing-channel-pareto-analysis/
 ├── data/                    orders.csv, website_sessions.csv.gz, data dictionary
 ├── notebooks/               teddyworld_pareto_marketing.ipynb (analysis with outputs)
 ├── reports/
+│   ├── TeddyWorld_Channel_Pareto_Results.xlsx  (Excel results workbook)
 │   ├── figures/             Pareto chart, sessions and conversion chart
 │   └── tables/              Pareto table and source performance (CSV)
-├── scripts/run_notebook.py  re-executes the notebook
+├── scripts/                 run_notebook.py, build_excel_report.py
 └── requirements.txt
 ```
 
@@ -81,7 +90,8 @@ marketing-channel-pareto-analysis/
 
 ```bash
 pip install -r requirements.txt
-python scripts/run_notebook.py
+python scripts/run_notebook.py        # re-run the analysis, refresh figures and tables
+python scripts/build_excel_report.py  # rebuild the Excel workbook
 ```
 
 ## Data
